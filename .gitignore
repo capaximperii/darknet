@@ -4,6 +4,9 @@
 *.out
 *.png
 *.jpg
+*.exe
+*.dll
+*.weights
 old/
 mnist/
 data/

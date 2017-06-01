@@ -13,15 +13,15 @@ ARCH= -gencode arch=compute_20,code=[sm_20,sm_21] \
 # ARCH=  -gencode arch=compute_52,code=compute_52
 
 VPATH=./src/
-EXEC=darknet
+EXEC=darknet.dll
 OBJDIR=./obj/
 
 CC=gcc
 NVCC=nvcc 
 OPTS=-Ofast
-LDFLAGS= -lm -pthread 
+LDFLAGS= -shared -lm -pthread 
 COMMON= 
-CFLAGS=-Wall -Wfatal-errors 
+CFLAGS=-Wall -Wfatal-errors -fpic
 
 ifeq ($(DEBUG), 1) 
 OPTS=-O0 -g
